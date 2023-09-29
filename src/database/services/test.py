@@ -33,11 +33,11 @@ class TestService:
     async def get_tests(self, uow: IUnitOfWork) -> List[dict]:
         async with uow:
             logger.write_log("DEBUG", "Get all tests")
-            tests = await uow.test.find_all()
+            tests = await uow.test.get_all()
             return tests
 
     async def get_tests_by_filters(self, uow: IUnitOfWork, filter_by: dict) -> List[dict]:
         async with uow:
             logger.write_log("DEBUG", f"Get all tests by filters: {filter_by}")
-            tests = await uow.test.find_by_filters(filter_by=filter_by)
+            tests = await uow.test.get_by_filters(filter_by=filter_by)
             return tests

@@ -22,7 +22,7 @@ class AdvLogger:
                                                     level=logging.DEBUG)
 
         current_date = datetime.now().strftime("%Y_%m_%d")
-        log_filename = os.path.join(PATH_LOG, f"log_{current_date}.log")
+        # log_filename = os.path.join(PATH_LOG, f"log_{current_date}.log")
         # file_handler: Handler = self.init_handler(
         #     handler_class=logging.handlers.RotatingFileHandler(
         #         filename=log_filename,

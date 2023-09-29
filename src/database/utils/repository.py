@@ -15,15 +15,15 @@ class AbstractRepository(ABC):
         raise NotImplementedError
 
     @abstractmethod
-    async def find_all():
-        raise NotImplementedError
-
-    @abstractmethod
-    async def find_by_filters():
-        raise NotImplementedError
-
-    @abstractmethod
     async def delete_by_filters():
+        raise NotImplementedError
+
+    @abstractmethod
+    async def get_all():
+        raise NotImplementedError
+
+    @abstractmethod
+    async def get_by_filters():
         raise NotImplementedError
 
 
